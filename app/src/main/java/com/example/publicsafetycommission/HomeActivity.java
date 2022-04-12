@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
-    ImageView registerComplaint;
+    ImageView registerComplaint, viewComplaints, profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,28 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         registerComplaint=findViewById(R.id.registerComplaint);
+        viewComplaints=findViewById(R.id.viewComplaint);
+        profile=findViewById(R.id.profilee);
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newIntent = new Intent(HomeActivity.this, viewProfile.class);
+                startActivity(newIntent);
+            }
+        });
 
         registerComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(HomeActivity.this, registerComplaintActivity.class);
+                Intent myIntent = new Intent(HomeActivity.this, ComplaintRegistrationNew.class);
+                startActivity(myIntent);
+            }
+        });
+        viewComplaints.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(HomeActivity.this, viewComplaints.class);
                 startActivity(myIntent);
             }
         });

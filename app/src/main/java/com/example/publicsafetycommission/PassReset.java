@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class PassReset extends AppCompatActivity {
     EditText user_name;
     Button reset;
-    DBHelperClass DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,6 @@ public class PassReset extends AppCompatActivity {
         setContentView(R.layout.activity_pass_reset);
         user_name=findViewById(R.id.btn_username);
         reset=findViewById(R.id.bt_reset);
-        DB= new DBHelperClass(this);
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override

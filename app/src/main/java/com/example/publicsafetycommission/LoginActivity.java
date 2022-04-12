@@ -22,17 +22,16 @@ public class LoginActivity extends AppCompatActivity {
     EditText name, passwordtext;
     Button btnLogin;
     ProgressBar simpleProgressBar;
-    TextView signup, forgotPass;
+    TextView signup, forgotPass, tokn;
     SharedPreferences sharedPreferences;
     private static final  String SHARED_PREF_NAME = "myPref";
-    private static final  String TOKEN = "myToken";
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         name=findViewById(R.id.editTextTextPersonName);
         passwordtext=findViewById(R.id.editTextTextPassword);
         btnLogin=findViewById(R.id.button);
@@ -68,16 +67,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
     public  void processdata(String user_name, String password)
     {
-        Call<responsemodel> call= apiController.getInstance()
+        Call<Responsemodel> call= apiController.getInstance()
                 .getapi()
                 .getlogin(user_name, password);
 
-        call.enqueue(new Callback<responsemodel>() {
+        call.enqueue(new Callback<Responsemodel>() {
             @Override
-            public void onResponse(Call<responsemodel> call, Response<responsemodel> response) {
+            public void onResponse(Call<Responsemodel> call, Response<Responsemodel> response) {
                 simpleProgressBar.setVisibility(View.INVISIBLE);
                 Boolean valid = true;
                 if ( TextUtils.isEmpty(user_name) ) {
@@ -91,16 +89,20 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 if ( valid ) {
-                    responsemodel object=response.body();
-                    if(object.getResponse() == 1){
-                        //String token = object.getToken();
+                    Responsemodel object = response.body();
+                    if(object.getResponse()==1) {
+                        name.setText("");
+                        passwordtext.setText("");
+                        int userId = object.getUser_id();
+
+                        SharedPreferences sharedPreferences = getSharedPreferences("YOUR_PREF_NAME", 0);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString(TOKEN, object.getToken());
+                        editor.putInt("user_id",userId);
                         editor.apply();
                         Intent myintent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(myintent);
-                    }else {
-                        Toast.makeText(getApplicationContext(), object.getMessage(), Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), object.getResponseMsg(), Toast.LENGTH_LONG).show();
                         name.setText("");
                         passwordtext.setText("");
                     }
@@ -108,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<responsemodel> call, Throwable t) {
+            public void onFailure(Call<Responsemodel> call, Throwable t) {
                 simpleProgressBar.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_LONG).show();
                 name.setText("");

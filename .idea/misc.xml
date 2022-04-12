@@ -3,6 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/audio.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/backarrow.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/button_custom.xml" value="0.2734375" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/circle.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/custom_input_field.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/doc.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/down.xml" value="0.2734375" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/drop_down.xml" value="0.2734375" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/eyegray.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/eyegreen.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/grayeye.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/image.xml" value="0.2734375" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/imageview.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/mycard.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/password.xml" value="0.2734375" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/profile.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/ripple.xml" value="0.2890625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/drawable/video.xml" value="0.2703125" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_complaint_registration_new.xml" value="0.27291666666666664" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_drop_down_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_pass_reset.xml" value="0.2046875" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_register_complaint.xml" value="0.33" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_update_profile.xml" value="0.190625" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_view_complaints.xml" value="0.27291666666666664" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/activity_view_profile.xml" value="0.33" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/cardlayout.xml" value="0.25" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/my_dropdown_item.xml" value="0.20677083333333332" />
+        <entry key="..\:/Desktop/PublicsafetyCommission/app/src/main/res/layout/my_selected_item.xml" value="0.20677083333333332" />
         <entry key="..\:/PublicsafetyCommission/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25625" />
         <entry key="..\:/PublicsafetyCommission/app/src/main/res/drawable/audio.xml" value="0.25625" />
         <entry key="..\:/PublicsafetyCommission/app/src/main/res/drawable/button_custom.xml" value="0.2890625" />

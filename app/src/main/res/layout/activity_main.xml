@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
         <!-- vertical ScrollView to make all the items or views scrollable -->
@@ -21,29 +22,272 @@
                             android:id="@+id/texttLayoutt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
 
 
                                 <TextView
+                                    android:id="@+id/textviewregister"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textSize="25sp"
-                                    android:textColor="@color/teal_700"
                                     android:text="Register Now"
-                                    android:id="@+id/textviewregister">
+                                    android:textColor="@color/green"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold">
 
                                 </TextView>
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/firsttLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_input_field"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                                <Spinner
+                                    android:id="@+id/districtspinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:autofillHints="Select gender" />
+                        </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/firstLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Full Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/secondLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                                <EditText
+                                    android:id="@+id/CNIC"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="CNIC"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLength="13"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/thirdLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_input_field"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                                <Spinner
+                                    android:id="@+id/genderspinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1"
+                                    android:autofillHints="Select gender" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/thirddLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/guardian"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Father/Husband Name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fgLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/email"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Email"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+                        <LinearLayout
+                            android:id="@+id/ghLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/unionconcil"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Union Council"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+                        <LinearLayout
+                            android:id="@+id/sLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/address"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Address"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+                        <LinearLayout
+                            android:id="@+id/fourthLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <!-- place one TextView and one EditText inside layout using weight property -->
+
+
+                                <EditText
+                                    android:id="@+id/phone"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1.4"
+                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Phone Number"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
+                        </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+                        <LinearLayout
+                            android:id="@+id/fifthLayoutt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
@@ -53,348 +297,110 @@
                                     android:id="@+id/userName"
                                     android:layout_width="0dp"
                                     android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
                                     android:layout_weight="1.4"
                                     android:background="@drawable/custom_input_field"
-                                    android:hint="user name"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:id="@+id/secondLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-                                <EditText
-                                    android:id="@+id/userPassword"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:background="@drawable/custom_input_field"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:hint="password"
-                                    android:inputType="textPassword"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:id="@+id/thirdLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-                                <EditText
-                                    android:id="@+id/userContact"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:background="@drawable/custom_input_field"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:hint="Contact"
-                                    android:inputType="textPersonName"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:id="@+id/thirddLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-                                <EditText
-                                    android:id="@+id/idfk"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:background="@drawable/custom_input_field"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:hint="District"
-                                    android:inputType="textPersonName"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:id="@+id/thirudLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-                                <EditText
-                                    android:id="@+id/status"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:background="@drawable/custom_input_field"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:hint="status"
-                                    android:inputType="textPersonName"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                    android:id="@+id/fgLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                        <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                        <EditText
-                            android:id="@+id/complainantDistrict"
-                            android:layout_width="0dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/custom_input_field"
-                            android:layout_weight="1.4"
-                            android:hint="District code"
-                            android:imeOptions="actionNext"
-                            android:paddingLeft="10dp"
-                            android:singleLine="true"/>
-                </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/ghLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                                <EditText
-                                    android:id="@+id/complainantEmail"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="email"
-                                    android:inputType="textEmailAddress"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true" />
-                        </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/sLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                                <EditText
-                                    android:id="@+id/complainantName"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="Complainant Name"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/fourthLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                                <EditText
-                                    android:id="@+id/complainantAddress"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="Complainant Address"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true" />
-                        </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/fifthLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                                <EditText
-                                    android:id="@+id/complainantConcil"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="union concil"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true"/>
-                        </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/sixthLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-
-                                <EditText
-                                    android:id="@+id/guardian"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="Complainant guardian"
-                                    android:imeOptions="actionNext"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true" />
-                        </LinearLayout>
-                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
-
-                        <LinearLayout
-                            android:id="@+id/seventhLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal">
-
-                                <!-- place one TextView and one EditText inside layout using weight property -->
-
-
-                                <EditText
-                                    android:id="@+id/cnic"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:hint="CNIC"
-                                    android:background="@drawable/custom_input_field"
+                                    android:hint="Type User Name"
                                     android:imeOptions="actionNext"
                                     android:inputType="textPersonName"
                                     android:paddingLeft="10dp"
-                                    android:singleLine="true" />
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="15sp" />
                         </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
 
                         <LinearLayout
-                            android:id="@+id/eightLayout"
+                            android:id="@+id/sixthLayoutt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
 
 
-                                <EditText
-                                    android:id="@+id/gender"
-                                    android:layout_width="0dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_weight="1.4"
-                                    android:background="@drawable/custom_input_field"
-                                    android:hint="gender"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="textPersonName"
-                                    android:paddingLeft="10dp"
-                                    android:singleLine="true" />
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:passwordToggleEnabled="true"
+                                    app:passwordToggleTint="@color/green">
+
+                                        <EditText
+                                            android:id="@+id/password"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="60dp"
+                                            android:layout_marginLeft="40dp"
+                                            android:layout_marginRight="40dp"
+                                            android:background="@drawable/custom_input_field"
+                                            android:drawablePadding="10dp"
+                                            android:hint="Password"
+                                            android:inputType="textPassword"
+                                            android:paddingHorizontal="15dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/black"
+                                            android:textColorHint="@color/black"
+                                            android:textSize="15sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
+                        <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+                        <LinearLayout
+                            android:id="@+id/seventhLayoutt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:passwordToggleEnabled="true"
+                                    app:passwordToggleTint="@color/green">
+
+                                        <EditText
+                                            android:id="@+id/confirmPassword"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="60dp"
+                                            android:layout_marginLeft="40dp"
+                                            android:layout_marginRight="40dp"
+                                            android:background="@drawable/custom_input_field"
+                                            android:drawablePadding="10dp"
+                                            android:hint="Confirm Password"
+                                            android:inputType="textPassword"
+                                            android:paddingHorizontal="15dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/black"
+                                            android:textColorHint="@color/black"
+                                            android:textSize="15sp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
 
                         <LinearLayout
                             android:id="@+id/texttLayout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
 
 
                                 <TextView
+                                    android:id="@+id/textviewlogin"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textSize="15sp"
-                                    android:textColor="@color/teal_700"
                                     android:text="already registered, login"
-                                    android:id="@+id/textviewlogin">
+                                    android:textColor="@color/green"
+                                    android:textSize="15sp">
 
                                 </TextView>
                         </LinearLayout>
@@ -403,8 +409,8 @@
                             android:id="@+id/buttonLayout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
@@ -414,27 +420,28 @@
                                     android:id="@+id/Register"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAllCaps="false"
                                     android:gravity="center"
-                                    android:text="Register" />
+                                    android:text="Register"
+                                    android:textAllCaps="false" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/textLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
                                 <!-- place one TextView and one EditText inside layout using weight property -->
 
 
                                 <TextView
+                                    android:id="@+id/textview"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20sp"
                                     android:gravity="center"
-                                    android:id="@+id/textview">
+                                    android:textSize="20sp">
 
                                 </TextView>
                         </LinearLayout>

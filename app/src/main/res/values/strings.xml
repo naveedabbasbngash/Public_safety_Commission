@@ -1,3 +1,65 @@
 <resources>
     <string name="app_name">Public safety Commission</string>
+
+    <string-array name="districts">
+        <item>Select district</item>
+        <item>Abbottabad</item>
+        <item>Bannu</item>
+        <item>Battagram</item>
+        <item>Buner</item>
+        <item>Charsadda</item>
+        <item>Chitral</item>
+        <item>Dera Ismail Khan</item>
+        <item>Hangu</item>
+        <item>Haripur</item>
+        <item>Karak</item>
+        <item>Kohat</item>
+        <item>Kohistan</item>
+        <item>Lakki Marwat</item>
+        <item>Lower Dir</item>
+        <item>Malakand</item>
+        <item>Mansehra</item>
+        <item>Mardan</item>
+        <item>Nowshera</item>
+        <item>Peshawar</item>
+        <item>Shangla</item>
+        <item>Swabi</item>
+        <item>Swat</item>
+        <item>Tank</item>
+        <item>Tor Ghar</item>
+        <item>Upper Dir</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Select complaint category</item>
+        <item>Accused supported by Police</item>
+        <item>Bribe by Police</item>
+        <item>Car occupied by Police</item>
+        <item>Corruption</item>
+        <item>Death in Police Custody</item>
+        <item>Demands for Bhatta</item>
+        <item>Fake FIR</item>
+        <item>Fraud</item>
+        <item>Harassment and threaten by Police</item>
+        <item>Harassment by Police</item>
+        <item>Harassment through Social Media</item>
+        <item>Illegal confinement</item>
+        <item>Illegal custody</item>
+        <item>Illegal Drug Trafficking</item>
+        <item>Illegal FIR</item>
+        <item>Illegal Possession</item>
+        <item>Illegal posting/ Transfer</item>
+        <item>Illegal Raid</item>
+        <item>Illegal Torture</item>
+        <item>Involvement  in Sectarian...</item>
+        <item>Land dispute/ Misuse of Power</item>
+        <item>Malafide Practices</item>
+        <item>Misbehavior of Police</item>
+    </string-array>
+    <string-array name="gender" textColor="green">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
 </resources>
